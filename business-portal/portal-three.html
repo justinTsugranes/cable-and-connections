@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Business Portal</title>
+    <style>
+      :root {
+        --primary-color: #f4f4f4;
+        --secondary-color: #212529;
+        --white-color: #fff;
+        --black-color: #000;
+        --base-font-size: 0.8em;
+        --base-spacing: 20px;
+        --base-radius: 16px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        padding: 0 1em;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        font-size: 3em;
+      }
+
+      h2 {
+        font-size: 1em;
+        margin-top: 10px;
+      }
+
+      .locations-title {
+        margin-top: 24px;
+        text-align: center;
+        font-size: 2em;
+      }
+
+      h3 {
+        font-size: 1.2em;
+      }
+
+      header {
+        background-color: #f4f4f4;
+      }
+
+      .navbar {
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 20px;
+        margin: 0 auto;
+      }
+
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .navbar ul li a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .contact-info {
+        margin-top: 10px;
+        font-size: 0.8em;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .banner {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background-image: url('https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-home-banner.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        margin-bottom: 10px;
+      }
+
+      .banner div {
+        padding: 20px 36px;
+        background: rgba(255, 255, 255, 0.7);
+        /* border-radius: 16px; */
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .grid-container {
+        margin: 1em auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 1em;
+        align-items: stretch;
+        max-width: 1000px;
+      }
+
+      .grid-item {
+        margin: auto;
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 0;
+        width: 100%;
+        max-width: 600px;
+        background-color: #f4f4f4;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+
+      .grid-item img {
+        width: 50%;
+        height: 125px;
+        max-width: 200px;
+        object-fit: cover;
+      }
+
+      .grid-item-text {
+        margin-left: 1em;
+        width: 100%;
+      }
+
+      footer {
+        padding: var(--base-spacing);
+        margin-top: 2em;
+        background-color: var(--secondary-color);
+        color: var(--white-color);
+      }
+
+      .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .footer-content a {
+        color: var(--white-color);
+        text-decoration: none;
+      }
+
+      .footer-content a:hover {
+        color: var(--primary-color);
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 10px;
+      }
+
+      .footer-links p {
+        margin: 0;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 10px;
+      }
+
+      .footer-social a {
+        margin-left: 5px;
+      }
+
+      @media (min-width: 768px) {
+        .contact-info {
+          margin-top: 0px;
+        }
+
+        .banner div {
+          border-radius: 16px;
+        }
+
+        .grid-container {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .footer-content {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .footer-links {
+          gap: 20px;
+        }
+
+        .footer-social {
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="https://www.cableandconnections.com" target="_blank"
+              >Visit Website</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://35.243.250.53/candc_ecomm/Ecommerce/Account/index.html"
+              >Account Profile</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://35.243.250.53/candc_ecomm/Ecommerce/Order/searchForm.html"
+              >Order Tracking</a
+            >
+          </li>
+          <li><a href="#">View Invoices</a></li>
+        </ul>
+        <div class="contact-info">
+          <p>Need Help?</p>
+          <a href="mailto:info@cableandconnections.com"
+            >info@cableandconnections.com</a
+          >
+          <a href="tel:8889473682">888-WIRE-682</a>
+          <a
+            href="http://35.243.250.53/candc_ecomm/Ecommerce/Controller/logout.html"
+            >LOGOUT</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="banner">
+        <div>
+          <h1>Business Portal</h1>
+          <h2>
+            A quick way to pay and view invoices, create new orders, and view
+            order history
+          </h2>
+        </div>
+      </section>
+
+      <h2 class="locations-title">Locations</h2>
+
+      <div class="grid-container">
+        <article class="grid-item">
+          <img
+            src="https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-columbia-sc-min.png"
+            alt="Location Image"
+          />
+          <div class="grid-item-text">
+            <h3>Columbia, SC</h3>
+            <p>2500 Leaphart Rd. Suite A, West Columbia, SC 29169.</p>
+            <a href="tel:8889473682">888-WIRE-682</a>
+            <!-- <a href="#">Learn More</a> -->
+          </div>
+        </article>
+        <article class="grid-item">
+          <img
+            src="https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-columbia-sc-min.png"
+            alt="Location Image"
+          />
+          <div class="grid-item-text">
+            <h3>Charleston, SC</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="tel:8889473682">888-WIRE-682</a>
+            <!-- <a href="#">Learn More</a> -->
+          </div>
+        </article>
+        <article class="grid-item">
+          <img
+            src="https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-columbia-sc-min.png"
+            alt="Location Image"
+          />
+          <div class="grid-item-text">
+            <h3>Greenville, SC</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="tel:8889473682">888-WIRE-682</a>
+            <!-- <a href="#">Learn More</a> -->
+          </div>
+        </article>
+        <article class="grid-item">
+          <img
+            src="https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-columbia-sc-min.png"
+            alt="Location Image"
+          />
+          <div class="grid-item-text">
+            <h3>Raleigh, NC</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="tel:8889473682">888-WIRE-682</a>
+
+            <!-- <a href="#">Learn More</a> -->
+          </div>
+        </article>
+        <article class="grid-item">
+          <img
+            src="https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-winston-salem-nc-min.png"
+            alt="Location Image"
+          />
+          <div class="grid-item-text">
+            <h3>Winston-Salem, NC</h3>
+            <p>3146 Starlight Dr. Winston-Salem, NC 27107</p>
+            <a href="tel:8889473682">888-WIRE-682</a>
+            <!-- <a href="#">Learn More</a> -->
+          </div>
+        </article>
+        <article class="grid-item">
+          <img
+            src="https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-northvale-nj-min.png"
+            alt="Location Image"
+          />
+          <div class="grid-item-text">
+            <h3>Northvale, NJ</h3>
+            <p>199 Firenze St. Northvale, NJ 07647</p>
+            <a href="tel:8889473682">888-WIRE-682</a>
+            <!-- <a href="#">Learn More</a> -->
+          </div>
+        </article>
+        <article class="grid-item">
+          <img
+            src="https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-independence-oh-min.png"
+            alt="Location Image"
+          />
+          <div class="grid-item-text">
+            <h3>Independence, Ohio</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="tel:8889473682">888-WIRE-682</a>
+            <!-- <a href="#">Learn More</a> -->
+          </div>
+        </article>
+        <article class="grid-item">
+          <img
+            src="https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-columbia-sc-min.png"
+            alt="Location Image"
+          />
+          <div class="grid-item-text">
+            <h3>Austin, TX</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="tel:8889473682">888-WIRE-682</a>
+            <!-- <a href="#">Learn More</a> -->
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>© 2023 Cable & Connections. All rights reserved.</p>
+        <div class="footer-links">
+          <p>
+            <a href="mailto:info@cableandconnections.com">Email Us</a>
+          </p>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.facebook.com/CableANDConnections?_ga=2.100360670.1741641455.1686236325-1099966350.1674782564"
+            >Facebook</a
+          >
+          |
+          <a
+            href="https://www.instagram.com/cable_and_connections/?_ga=2.35743328.1741641455.1686236325-1099966350.1674782564"
+            >Instagram</a
+          >
+          |
+          <a
+            href="https://www.tiktok.com/@cable_and_connections?_ga=2.35743328.1741641455.1686236325-1099966350.1674782564"
+            >TikTok</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
