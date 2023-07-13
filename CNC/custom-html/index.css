@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  padding: 20px;
+}
+
+/* component container */
+.home-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* left and right cards container */
+.home-cards-left,
+.home-cards-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+}
+
+.home-cards-right {
+  height: 100%;
+}
+
+/* left cards */
+.home-card-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* max-width: 640px; */
+}
+
+.home-card-left img {
+  width: 100%;
+  height: auto;
+}
+
+.home-card-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.home-card-left h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.home-card-left h3 {
+  font-size: 1.125rem;
+  margin-top: 10px;
+}
+
+.home-card-left a {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.home-card-left a:hover,
+.home-cards-right a:hover {
+  cursor: pointer;
+}
+
+/* right cards */
+.home-card-right {
+  width: 100%;
+  /* height: 100%; */
+  height: 50%;
+}
+
+.home-cards-right img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* max-width: 640px; */
+}
+
+@media (min-width: 768px) {
+  .home-cards-left {
+    flex-direction: row;
+  }
+
+  .home-card-left {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-cards-container {
+    flex-direction: row;
+  }
+
+  .home-cards-left,
+  .home-cards-right {
+    width: calc(50% - 10px);
+  }
+
+  .home-card-left {
+    max-width: 640px;
+  }
+
+  .home-card-left h2 {
+    font-size: 2.5rem;
+  }
+
+  .home-card-left h3 {
+    font-size: 1.5rem;
+  }
+
+  .home-card-left a {
+    font-size: 1rem;
+  }
+}
