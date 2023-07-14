@@ -1,0 +1,234 @@
+:root {
+  --primary-color: #f4f4f4;
+  --secondary-color: #212529;
+  --white-color: #fff;
+  --black-color: #000;
+  --base-font-size: 0.8em;
+  --base-spacing: 20px;
+  --base-radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.3em 0;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+a,
+a:visited,
+a:focus,
+a:active,
+a:link {
+  text-decoration: none;
+  color: currentColor;
+  transition: 0.2s ease-in-out;
+  outline: 0;
+}
+
+body {
+  font-family: 'hm_light', sans-serif;
+  padding: 0 1em;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #171717;
+  display: flex;
+  flex-direction: column;
+}
+
+body img {
+  vertical-align: middle;
+  height: auto;
+  width: 100%;
+}
+
+header {
+  background-color: #f4f4f4;
+}
+
+footer {
+  padding: var(--base-spacing);
+  margin-top: 2em;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.navbar {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.locations-title {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.contact-info {
+  margin-top: 10px;
+  font-size: 0.8em;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: url('https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-home-banner.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.banner div {
+  padding: 20px 36px;
+  background: rgba(255, 255, 255, 0.7);
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.grid-container {
+  margin: 1em auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1em;
+  align-items: stretch;
+  max-width: 1000px;
+}
+
+.grid-item {
+  margin: auto;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+  width: 100%;
+  max-width: 600px;
+  background-color: #f4f4f4;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.grid-item img {
+  width: 50%;
+  height: 125px;
+  max-width: 200px;
+  object-fit: cover;
+}
+
+.grid-item p {
+  margin-top: 10px;
+}
+
+.grid-item-text {
+  margin-left: 1em;
+  width: 100%;
+  text-align: left;
+}
+
+.grid-item-text a {
+  margin-top: 6px;
+}
+
+/* FOOTER */
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-content a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  color: var(--primary-color);
+}
+
+.footer-links {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-links p {
+  margin: 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social a {
+  margin-left: 5px;
+}
+
+@media (min-width: 768px) {
+  .contact-info {
+    margin-top: 0px;
+  }
+
+  .banner div {
+    border-radius: 16px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-links {
+    gap: 20px;
+  }
+
+  .footer-social {
+    gap: 20px;
+  }
+}
