@@ -6,10 +6,9 @@
     <title>Rubicon Home Page</title>
     <link rel="stylesheet" href="home.css" />
   </head>
-  <body>
-    <main>
+      <!-- HEADER -->
       <header>
-        <nav class="navbar">
+        <nav>
           <ul>
             <li>
               <a id="home-btn" href="#home-section">Home</a>
@@ -38,22 +37,96 @@
         </nav>
       </header>
 
+      <main>
+
+      <!-- HOME -->
       <section id="home-section" class="section-container">
-        <h2>Welcome Home</h2>
+        <div>
+          <h2>Welcome Home</h2>
+          
+          <h3>Company Announcements</h3>
+          <p>Happy 30th Birthday Tharron</p>
+          
+          <h3>Sales Challenges</h3>
+          <p>Check back soon for monthly sales challenges.</p>
+        </div>
 
-        <h3>Company Announcements</h3>
-        <p>Happy 30th Birthday Tharron</p>
-
-        <h3>Sales Challenges</h3>
-
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
-          laboriosam repellendus quaerat voluptate amet accusamus ut nam
-          repudiandae magnam odio non eos, dicta laudantium incidunt reiciendis
-          maxime sapiente ab cupiditate.
-        </p>
+        <!-- LOCATIONS -->
+      <section id="locations">
+        <h2>Locations</h2>
+        <div class="grid-container">
+          <article class="grid-item">
+            <img
+              src="https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-columbia-sc-min.png"
+              alt="Location Image"
+            />
+            <div class="grid-item-text">
+              <h3>Columbia, SC</h3>
+              <p>2500 Leaphart Rd. Suite A, West Columbia, SC 29169.</p>
+              <a href="tel:8889473682">888-WIRE-682</a>
+            </div>
+          </article>
+          <article class="grid-item">
+            <img
+              src="https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-columbia-sc-min.png"
+              alt="Location Image"
+            />
+            <div class="grid-item-text">
+              <h3>Greenville, SC</h3>
+              <p>Stay tuned for updates on our new locations!</p>
+              <a href="tel:8889473682">888-WIRE-682</a>
+            </div>
+          </article>
+          <article class="grid-item">
+            <img
+              src="https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-columbia-sc-min.png"
+              alt="Location Image"
+            />
+            <div class="grid-item-text">
+              <h3>Raleigh, NC</h3>
+              <p>2660 Discovery Dr Suite 120, Raleigh, NC 27616</p>
+              <a href="tel:3362832083">(336) 283-2083</a>
+            </div>
+          </article>
+          <article class="grid-item">
+            <img
+              src="https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-winston-salem-nc-min.png"
+              alt="Location Image"
+            />
+            <div class="grid-item-text">
+              <h3>Winston-Salem, NC</h3>
+              <p>3146 Starlight Dr. Winston-Salem, NC 27107</p>
+              <a href="tel:8889473682">888-WIRE-682</a>
+            </div>
+          </article>
+          <article class="grid-item">
+            <img
+              src="https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-northvale-nj-min.png"
+              alt="Location Image"
+            />
+            <div class="grid-item-text">
+              <h3>Northvale, NJ</h3>
+              <p>199 Firenze St. Northvale, NJ 07647</p>
+              <a href="tel:2012852135">(201) 285-2135</a>
+            </div>
+          </article>
+          <article class="grid-item">
+            <img
+              src="https://cableandconnections.com/wp-content/uploads/2023/06/cable-and-connections-independence-oh-min.png"
+              alt="Location Image"
+            />
+            <div class="grid-item-text">
+              <h3>Cleveland, Ohio</h3>
+              <p>100 Hayes Dr. Suite A, Independence, OH 44131</p>
+              <a href="tel:2164038681">(216) 403-8681</a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- /END LOCATIONS -->
       </section>
 
+      <!-- MONTHLY SALES -->
       <section id="monthly-sales-section" class="section-container">
         <h2>Monthly Sales</h2>
         <a
@@ -65,6 +138,8 @@
             alt="monthly sales flyer"
         /></a>
       </section>
+
+      <!-- VENDOR PRICE LISTS -->
       <section id="vendor-price-list-section" class="section-container">
         <h2>Vendor Price Lists</h2>
         <ul>
@@ -185,6 +260,7 @@
         </ul>
       </section>
 
+      <!-- LINE CARDS -->
       <section id="line-cards-section" class="section-container">
         <h2>2023 Vendor Line Cards</h2>
         <div class="line-cards-container">
@@ -232,17 +308,19 @@
           >
         </div>
       </section>
+
+      <!-- EMPLOYEE EXTENSIONS -->
       <section
         id="employee-extension-section"
-        class="extensions section-container"
+        class="dropdowns section-container"
       >
         <h2>Employee Extension List</h2>
         <ul>
           <li class="dropdown__item">
-            <label for="extension1">Exmployee Extension List</label>
+            <label for="dropdown1">Exmployee Extension List</label>
             <input
               type="checkbox"
-              id="extension1"
+              id="dropdown1"
               class="dropdown__checkbox"
               aria-label="Toggle extension 1 details"
               checked
@@ -333,10 +411,10 @@
             </table>
           </li>
           <li class="dropdown__item">
-            <label for="extension2">North Carolina List</label>
+            <label for="dropdown2">North Carolina List</label>
             <input
               type="checkbox"
-              id="extension2"
+              id="dropdown2"
               class="dropdown__checkbox"
               aria-label="North Carolina List details"
               checked
@@ -372,10 +450,10 @@
             </table>
           </li>
           <li class="dropdown__item">
-            <label for="extension3">New Jersey List</label>
+            <label for="dropdown3">New Jersey List</label>
             <input
               type="checkbox"
-              id="extension3"
+              id="dropdown3"
               class="dropdown__checkbox"
               aria-label="New Jersey List details"
               checked
@@ -426,10 +504,10 @@
             </table>
           </li>
           <li class="dropdown__item">
-            <label for="extension4">Ohio List</label>
+            <label for="dropdown4">Ohio List</label>
             <input
               type="checkbox"
-              id="extension4"
+              id="dropdown4"
               class="dropdown__checkbox"
               aria-label="Ohio list details"
               checked
@@ -465,10 +543,10 @@
             </table>
           </li>
           <li class="dropdown__item">
-            <label for="extension5">Remote Sales List</label>
+            <label for="dropdown5">Remote Sales List</label>
             <input
               type="checkbox"
-              id="extension5"
+              id="dropdown5"
               class="dropdown__checkbox"
               aria-label="Remote sales list details"
               checked
@@ -511,6 +589,9 @@
         </ul>
       </section>
 
+    </main>
+
+      <!-- FOOTER -->
       <footer>
         <div class="footer-content">
           <p>© 2023 Cable & Connections. All rights reserved.</p>
@@ -550,7 +631,6 @@
           </div>
         </div>
       </footer>
-    </main>
 
     <script src="home.js"></script>
   </body>

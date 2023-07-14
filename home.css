@@ -79,6 +79,7 @@ body img {
 nav {
   max-width: 1200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
@@ -92,6 +93,7 @@ nav ul {
   padding: 0;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 6px;
 }
@@ -186,6 +188,58 @@ footer {
   padding: 1em 0 2em 0;
 }
 
+/* HOME */
+
+#locations h2 {
+  color: var(--secondary-color);
+  margin-top: 24px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.grid-container {
+  margin: 1em auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1em;
+  align-items: stretch;
+  max-width: 1000px;
+}
+
+.grid-item {
+  margin: auto;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.grid-item img {
+  width: 50%;
+  height: 125px;
+  max-width: 200px;
+  object-fit: cover;
+}
+
+.grid-item p {
+  margin-top: 10px;
+}
+
+.grid-item-text {
+  margin-left: 1em;
+  width: 100%;
+  text-align: left;
+}
+
+.grid-item-text a {
+  margin-top: 6px;
+}
+
 /* VENDOR PRICE LIST SECTION */
 
 #vendor-price-list-section ul {
@@ -197,6 +251,7 @@ footer {
 }
 
 /* MONTHLY SALES */
+
 #monthly-sales-section {
   text-align: center;
 }
@@ -204,12 +259,16 @@ footer {
   padding-top: 24px;
 }
 
-/* DROPDOWNS */
+/* EMPLOYEE EXTENSIONS */
 
-.dropdown {
+.dropdowns {
   max-width: 1000px;
   margin: auto;
   padding: 2em 2em;
+}
+
+.dropdown__title {
+  padding-left: 14px;
 }
 
 .dropdown ul {
@@ -249,8 +308,8 @@ footer {
   transition: all 0.3s;
 }
 
-.dropdown .no-select,
-.dropdown h2 {
+.dropdowns .no-select,
+.dropdowns h2 {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   user-select: none;
@@ -351,6 +410,8 @@ footer {
   transform: translate(-2px, 0) rotate(-45deg);
 }
 
+/* LINE CARDS */
+
 .line-cards-container {
   display: table-cell;
   vertical-align: middle;
@@ -430,6 +491,22 @@ footer ul {
 }
 
 @media (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+  }
+
+  .contact-info {
+    margin-top: 0px;
+  }
+
+  .banner div {
+    border-radius: 16px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
